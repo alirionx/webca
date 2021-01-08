@@ -1,0 +1,4 @@
+#include webca/schema.sql
+graft webca/static
+#graft webca/templates
+global-exclude *.pyc
