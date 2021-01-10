@@ -27,6 +27,11 @@ app.debug = True
 
 
 
+#-The static web content serve-------------------------------------
+@app.route('/')
+def root():
+  return app.send_static_file('index.html')
+
 
 
 #-The API Request Handler Area-------------------------------------
@@ -35,14 +40,6 @@ def hello_app():
   myHelper.hello_world()
   
   return 'Hello from the WebCA API!'
-
-
-
-
-#-The static web content serve-------------------------------------
-@app.route('/')
-def root():
-  return app.send_static_file('index.html')
 
 
 
